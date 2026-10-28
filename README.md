@@ -37,7 +37,7 @@ If you installed an earlier copy of this preview, the refreshed app uses a new d
 
 ## Preview status
 
-All three platform builds and their automated native tests passed. These refreshed installers have not yet been tested interactively, and a complete disc import and gameplay session has not been verified for this release. Some stages and modes remain unfinished.
+All three platform builds and their automated native tests passed. The refreshed Apple Silicon Mac app passed a launch and menu-navigation check covering the launcher, Data Loader, title screen, Options menu, and return to the launcher. Windows and Linux installers have not been tested interactively, and a complete disc import and gameplay session has not been verified for this release. Some stages and modes remain unfinished. The Mac menu check also found text overlapping the on-screen controls.
 
 ## Report a problem
 
