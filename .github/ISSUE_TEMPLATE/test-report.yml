@@ -1,0 +1,38 @@
+name: Test report
+description: Tell us whether PDW3 worked on your computer.
+title: "[Test] "
+body:
+  - type: dropdown
+    id: import
+    attributes:
+      label: Did the import work?
+      options: ["Yes", "No", "Didn't get that far"]
+    validations:
+      required: true
+  - type: dropdown
+    id: game
+    attributes:
+      label: Did the game start and play?
+      options: ["Yes", "Partly (see below)", "No", "Didn't try"]
+    validations:
+      required: true
+  - type: input
+    id: computer
+    attributes:
+      label: Your computer and operating system
+      placeholder: "MacBook Air M2 / Windows 11, Ryzen 5, RTX 3060"
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Test report from the app, if available
+      description: In the Data Loader, press Copy test report under the result and paste it here. Leave blank if the app did not open. Do not include disc images or original game files.
+      render: text
+  - type: textarea
+    id: notes
+    attributes:
+      label: What happened?
+      description: Include the app version, what you tried, how long it took, and any error message. Screenshots help.
+    validations:
+      required: true
