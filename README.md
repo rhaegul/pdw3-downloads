@@ -37,7 +37,7 @@ If you installed an earlier copy of this preview, the refreshed app uses a new d
 
 ## Preview status
 
-All three platform builds and their automated native tests passed. The Mac build was also checked for launch, Data Loader access, menu input, and return navigation. A complete disc import and gameplay session has not been verified for this release, and Windows/Linux installers have not yet been tested interactively. Some stages and modes remain unfinished.
+All three platform builds and their automated native tests passed. These refreshed installers have not yet been tested interactively, and a complete disc import and gameplay session has not been verified for this release. Some stages and modes remain unfinished.
 
 ## Report a problem
 
