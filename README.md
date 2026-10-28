@@ -33,6 +33,8 @@ Download one installer for your computer. Intel Mac builds are not included in t
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
+If you installed an earlier copy of this preview, the refreshed app uses a new data folder. Your existing data is not deleted; you may need to select your disc images again in Data Loader.
+
 ## Preview status
 
 All three platform builds and their automated native tests passed. The Mac build was also checked for launch, Data Loader access, menu input, and return navigation. A complete disc import and gameplay session has not been verified for this release, and Windows/Linux installers have not yet been tested interactively. Some stages and modes remain unfinished.
