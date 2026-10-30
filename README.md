@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.2 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.2-preview.3)
+[**Open the 0.1.3 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.3-preview.4)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.2-preview.3/PDW3-0.1.2-preview.3-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.2-preview.3/PDW3-0.1.2-preview.3-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.2-preview.3/PDW3-0.1.2-preview.3-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.2-preview.3/PDW3-0.1.2-preview.3-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.2-preview.3/PDW3-0.1.2-preview.3-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Linux-amd64.deb) |
 
-**Windows users:** this update fixes the disc-verification startup error in the previous installer. Install 0.1.2 and choose your discs again; no separate Python installation is needed.
+**Install this version manually once.** It adds in-app updates and fixes the Linux AppImage’s incorrect “Python 3.13+” startup error. The Windows disc-verification fix from 0.1.2 is included. No separate Python installation is needed.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.2-preview.3/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
@@ -35,7 +35,11 @@ Download one installer for your computer. Intel Mac builds are not included in t
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1 or 0.1.2 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+
+## Future updates
+
+The app checks for updates when the launcher opens. You can also open **Settings → Check for updates**. Choose **Install and restart** when an update is available; the app verifies its signature before installing. Updates wait until imports finish. Linux in-app updates require the AppImage; update Debian packages manually.
 
 ## What to try
 
@@ -43,7 +47,7 @@ Try **Hu Lao Gate**, **DW3 Free Mode stages 02–19**, and the **XL Yellow Turba
 
 ## Preview status
 
-This patch repairs the Python runtime bundled with Windows. Release builds now run the disc verifier using the bundled Python on each platform, and the Windows job also installs the EXE and checks the installed verifier. These checks use an empty test file, not original game media. A full fresh install and disc import on a clean machine remains untested. The Windows and Linux app interfaces have not been tested interactively. Some stages and modes remain unfinished. On-screen controls may overlap lower menu text at some window sizes.
+Release checks run the disc verifier using bundled Python on each platform, install the Windows EXE and check its verifier, and test Python plus the Node import worker through the actual AppImage launcher. Update package signatures are verified before publication. These checks use test files, not original game media. A full fresh install and disc import on a clean machine remains untested. The Windows and Linux app interfaces have not been tested interactively. This is the first public version with an updater; an upgrade from an earlier public updater-enabled release has not yet been exercised. Some stages and modes remain unfinished. On-screen controls may overlap lower menu text at some window sizes.
 
 ## Report a problem
 
