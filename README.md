@@ -4,22 +4,22 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.0 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/v0.1.0-preview.1)
+[**Open the 0.1.1 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.1-preview.2)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/v0.1.0-preview.1/PDW3-0.1.0-preview.1-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/v0.1.0-preview.1/PDW3-0.1.0-preview.1-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/v0.1.0-preview.1/PDW3-0.1.0-preview.1-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/v0.1.0-preview.1/PDW3-0.1.0-preview.1-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/v0.1.0-preview.1/PDW3-0.1.0-preview.1-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.1-preview.2/PDW3-0.1.1-preview.2-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.1-preview.2/PDW3-0.1.1-preview.2-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.1-preview.2/PDW3-0.1.1-preview.2-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.1-preview.2/PDW3-0.1.1-preview.2-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.1-preview.2/PDW3-0.1.1-preview.2-Linux-amd64.deb) |
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.1-preview.2/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
 - Your own **Dynasty Warriors 3 (US)** and **Dynasty Warriors 3: Xtreme Legends (US)** disc images (`.iso`). Both are required by the Data Loader.
 - Optionally, your own **Dynasty Warriors 2 (US)** disc image, keeping its `.cue` and `.bin` files together.
-- Around **36 GB of free disk space**. Check the Data Loader's estimate for your selected discs before building.
-- Time for the first import: approximately **30 minutes to several hours**, depending on your computer and selected discs.
+- About **40 GB of free disk space while importing**, and about **10 GB** for the finished game data. Check the Data Loader's estimate for your selected discs before building.
+- Time for the first import: approximately **30 minutes to 4 hours**, depending on your computer and selected discs.
 
 **No original game media comes with these downloads.** The app includes the Python and Node runtimes it needs; you do not need to install them separately. Disc files are processed on your computer.
 
@@ -35,9 +35,15 @@ Download one installer for your computer. Intel Mac builds are not included in t
 
 If you installed an earlier copy of this preview, the refreshed app uses a new data folder. Your existing data is not deleted; you may need to select your disc images again in Data Loader.
 
+## What to try
+
+Try **Hu Lao Gate**, **DW3 Free Mode stages 02–19**, and the **XL Yellow Turban** stage. DW3 Yellow Turban, the other XL stages, and DW2 stages are not yet importable.
+
+The app identifier changed from the first preview, so **choose your discs again** in Data Loader and build the game data in the new folder. Existing data is not deleted or moved.
+
 ## Preview status
 
-All three platform builds and their automated native tests passed. The refreshed Apple Silicon Mac app passed a launch and menu-navigation check covering the launcher, Data Loader, title screen, Options menu, and return to the launcher. Windows and Linux installers have not been tested interactively, and a complete disc import and gameplay session has not been verified for this release. Some stages and modes remain unfinished. The Mac menu check also found text overlapping the on-screen controls.
+All three platform builds, automated native tests, code checks, PS2-only guards and release identity audits passed. The app extracted from the Apple Silicon Mac installer passed launcher, Data Loader, title screen, Options and return-to-launcher checks. Its bundled Python, NumPy and Node runtimes also passed startup checks. A full fresh install and disc import on a clean machine remains untested. Windows and Linux installers have not been tested interactively. Some stages and modes remain unfinished. On-screen controls may overlap lower menu text at some window sizes.
 
 ## Report a problem
 
