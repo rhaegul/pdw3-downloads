@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.6 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.6-preview.7)
+[**Open the 0.1.7 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.7-preview.8)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.6-preview.7/PDW3-0.1.6-preview.7-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.6-preview.7/PDW3-0.1.6-preview.7-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.6-preview.7/PDW3-0.1.6-preview.7-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.6-preview.7/PDW3-0.1.6-preview.7-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.6-preview.7/PDW3-0.1.6-preview.7-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.7-preview.8/PDW3-0.1.7-preview.8-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.7-preview.8/PDW3-0.1.7-preview.8-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.7-preview.8/PDW3-0.1.7-preview.8-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.7-preview.8/PDW3-0.1.7-preview.8-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.7-preview.8/PDW3-0.1.7-preview.8-Linux-amd64.deb) |
 
-**This release adds Warriors Orochi 2 character extraction: officers, outfits, weapons, generals and soldiers.** In 0.1.3–0.1.5, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need a manual installation. After updating, load your optional WO2 disc and rebuild game data to add its characters; updating the app alone does not add packs to an older installation. Python and Node are included.
+**This release adds clear Change file and Change folder controls to the Data Loader.** Replace a moved ISO, choose new storage, or reconnect an existing PDW3 data folder. In 0.1.3–0.1.6, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need a manual installation. Existing game data can be reused without rebuilding for this update. Python and Node are included.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.6-preview.7/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.7-preview.8/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
@@ -36,7 +36,15 @@ Download one installer for your computer. Intel Mac builds are not included in t
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. Load WO2 if wanted, then rebuild after updating to add its characters. Already collected discs can be reused; the previous installation is preserved.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1–0.1.5 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.6 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+
+## Change file paths or storage
+
+In **Data Loader**, use **Change file** to replace a selected disc or find one that moved. The full path is displayed. Cancelling a picker keeps the previous selection.
+
+Use **Data folder → Change folder** to choose an empty folder for future loads/builds or reconnect an existing PDW3 data folder. The app remembers the location after restarting or updating. **Open data folder** opens that location. Existing files are left in place; they are not copied or moved automatically. A fresh folder keeps the ISO choices but needs its game data loaded/built there.
+
+To move existing data, copy the complete data folder and then select the copy, including `collector.json`, `collections`, `installations`, and the selection JSON files. If an external drive was unavailable when the app started, reconnect it and choose that same folder again. Finish or cancel a data operation before changing paths.
 
 ## Future updates
 
