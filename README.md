@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.3 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.3-preview.4)
+[**Open the 0.1.4 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.4-preview.5)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/PDW3-0.1.3-preview.4-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Linux-amd64.deb) |
 
-**Install this version manually once.** It adds in-app updates and fixes the Linux AppImage’s incorrect “Python 3.13+” startup error. The Windows disc-verification fix from 0.1.2 is included. No separate Python installation is needed.
+**This release fixes the missing `asset_pack.py` error when building game data.** In 0.1.3, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need a manual installation. Python and Node are included; no separate runtime installation is needed.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.3-preview.4/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
@@ -32,10 +32,10 @@ Download one installer for your computer. Intel Mac builds are not included in t
    - **Windows:** run the EXE or MSI. This preview is unsigned, so Windows may show a SmartScreen warning.
    - **Linux:** make the AppImage executable and run it, or install the `.deb` with your distribution's package installer.
 2. Open **Data Loader**, choose each disc image, and wait for its verification result.
-3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**.
+3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. If a previous build failed with `asset_pack.py` missing, update the app and start a new build; already collected discs can be reused.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1 or 0.1.2 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.3 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
 
 ## Future updates
 
@@ -47,7 +47,7 @@ Try **Hu Lao Gate**, **DW3 Free Mode stages 02–19**, and the **XL Yellow Turba
 
 ## Preview status
 
-Release checks run the disc verifier using bundled Python on each platform, install the Windows EXE and check its verifier, and test Python plus the Node import worker through the actual AppImage launcher. Update package signatures are verified before publication. These checks use test files, not original game media. A full fresh install and disc import on a clean machine remains untested. The Windows and Linux app interfaces have not been tested interactively. This is the first public version with an updater; an upgrade from an earlier public updater-enabled release has not yet been exercised. Some stages and modes remain unfinished. On-screen controls may overlap lower menu text at some window sizes.
+Release checks run the bundled disc verifier and load every importer recipe. They also check the packaged Mac app, installed Windows EXE, and importer through the actual AppImage launcher, including the required `asset_pack.py` helper. Update package signatures are verified before publication. These checks use test files, not original game media. A full fresh install and disc import on a clean machine remains untested. The Windows and Linux app interfaces have not been tested interactively. An interactive upgrade/restart from an earlier public updater-enabled release has not yet been exercised. Some stages and modes remain unfinished. On-screen controls may overlap lower menu text at some window sizes.
 
 ## Report a problem
 
