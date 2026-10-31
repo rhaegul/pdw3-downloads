@@ -4,24 +4,24 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.4 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.4-preview.5)
+[**Open the 0.1.5 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.5-preview.6)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/PDW3-0.1.4-preview.5-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.5-preview.6/PDW3-0.1.5-preview.6-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.5-preview.6/PDW3-0.1.5-preview.6-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.5-preview.6/PDW3-0.1.5-preview.6-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.5-preview.6/PDW3-0.1.5-preview.6-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.5-preview.6/PDW3-0.1.5-preview.6-Linux-amd64.deb) |
 
-**This release fixes the missing `asset_pack.py` error when building game data.** In 0.1.3, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need a manual installation. Python and Node are included; no separate runtime installation is needed.
+**This release enables regular DW3 Yellow Turban and the full DW2/DW3XL map sets as playable previews.** In 0.1.3 or 0.1.4, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need a manual installation. After updating, rebuild game data to add the new maps; updating the app alone does not add packs to an older installation. Python and Node are included.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.4-preview.5/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.5-preview.6/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
 - Your own **Dynasty Warriors 3 (US)** and **Dynasty Warriors 3: Xtreme Legends (US)** disc images (`.iso`). Both are required by the Data Loader.
 - Optionally, your own **Dynasty Warriors 2 (US)** disc image, keeping its `.cue` and `.bin` files together.
-- About **40 GB of free disk space while importing**, and about **10 GB** for the finished game data. Check the Data Loader's estimate for your selected discs before building.
-- Time for the first import: approximately **30 minutes to 4 hours**, depending on your computer and selected discs.
+- Plan for **at least 65 GB of free disk space** when importing all three discs. The full plan currently budgets about 56 GiB during the build and 45 GiB of output; these are conservative estimates, not measured final sizes. Use the Data Loader's estimate for your selected discs.
+- Allow several hours for a full import. The additional maps increase the work; time depends on your computer and selected discs.
 
 **No original game media comes with these downloads.** The app includes the Python and Node runtimes it needs; you do not need to install them separately. Disc files are processed on your computer.
 
@@ -32,10 +32,10 @@ Download one installer for your computer. Intel Mac builds are not included in t
    - **Windows:** run the EXE or MSI. This preview is unsigned, so Windows may show a SmartScreen warning.
    - **Linux:** make the AppImage executable and run it, or install the `.deb` with your distribution's package installer.
 2. Open **Data Loader**, choose each disc image, and wait for its verification result.
-3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. If a previous build failed with `asset_pack.py` missing, update the app and start a new build; already collected discs can be reused.
+3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. Rebuild after updating to add the new maps. Already collected discs can be reused; the previous installation is preserved.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1–0.1.3 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.4 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
 
 ## Future updates
 
@@ -43,7 +43,7 @@ The app checks for updates when the launcher opens. You can also open **Settings
 
 ## What to try
 
-Try **Hu Lao Gate**, **DW3 Free Mode stages 02–19**, and the **XL Yellow Turban** stage. DW3 Yellow Turban, the other XL stages, and DW2 stages are not yet importable.
+Open **Play Game → Free Mode** after building data. All **20 DW3**, **23 DW3XL**, and **8 DW2** battlefields are available with their required discs. DW3 includes the regular **Yellow Turban Rebellion** with Han Forces and Yellow Turbans. DW2 and XL use shared DW3 combat; events, reinforcements and some victory conditions remain incomplete. The goal is to enter the original maps and attempt their battles, not complete original-game parity.
 
 ## Preview status
 
