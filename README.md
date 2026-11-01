@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.9 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.9-preview.10)
+[**Open the 0.1.10 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.10-preview.11)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.9-preview.10/PDW3-0.1.9-preview.10-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.9-preview.10/PDW3-0.1.9-preview.10-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.9-preview.10/PDW3-0.1.9-preview.10-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.9-preview.10/PDW3-0.1.9-preview.10-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.9-preview.10/PDW3-0.1.9-preview.10-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Linux-amd64.deb) |
 
-**This release fixes missing `USA_FONT.TM2` / `KANJI.TM2` errors when building directly from a DW3 ISO.** Original disc fonts are now staged with the other required files. In 0.1.3–0.1.8, open **Settings → Check for updates**, then choose **Install and restart**. Retry **Build game data** after updating; completed installations and collected discs remain compatible. Earlier previews and Debian packages need a manual installation. The earlier Hu Lao verification and selected-drive storage fixes are included. Python and Node are included.
+**This release fixes Windows combat sound paths and adds automatic repair of the app’s private Python.** Existing Windows-built game data can enter battles without rebuilding for the sound-path fix. Data Loader checks its Python before enabling Load/build; if repair is needed, it shows progress and offers **Retry Python setup** after failure or cancellation. Repair needs internet access only when neither the bundled nor cached private runtime passes verification. It leaves other Python installations and existing game data unchanged. Importer work also reduces repeated extraction calculations while preserving the generated files. Use **Game data location → Change drive or folder** to choose storage such as `D:\PDW3`. In 0.1.3–0.1.9, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.9-preview.10/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
@@ -32,11 +32,11 @@ Download one installer for your computer. Intel Mac builds are not included in t
    - **Mac:** open the DMG and drag the app to Applications. This preview is ad-hoc signed and is not notarized. If macOS blocks it after your first attempt to open it, follow [Apple's instructions for opening an app from an unidentified developer](https://support.apple.com/en-us/102445).
    - **Windows:** run the EXE or MSI. This preview is unsigned, so Windows may show a SmartScreen warning.
    - **Linux:** make the AppImage executable and run it, or install the `.deb` with your distribution's package installer.
-2. Open **Data Loader**. Under **Game data location**, choose a folder on the drive you want to use, then choose each disc image and wait for its verification result.
+2. Open **Data Loader** and wait for the Python check or setup to finish. Under **Game data location**, choose a folder on the drive you want to use, then choose each disc image and wait for its verification result.
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. Load WO2 if wanted, then rebuild after updating to add its characters. Already collected discs can be reused; the previous installation is preserved.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1–0.1.8 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.9 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
 
 ## Change file paths or storage
 
@@ -46,7 +46,7 @@ Use **Game data location → Change drive or folder** to choose an empty folder 
 
 To move existing data, copy the complete data folder and then select the copy, including `collector.json`, `collections`, `installations`, and the selection JSON files. If an external drive was unavailable when the app started, reconnect it and choose that same folder again. Finish or cancel a data operation before changing paths.
 
-If a build failed with “Route grid does not identify the verified Hu Lao map”, update to this release and retry **Build game data**. The same applies to missing `USA_FONT.TM2` / `KANJI.TM2` build errors; no manual font copying is needed. Already collected discs can be reused. The app and updater downloads remain separate from the game-data location.
+If a build failed with “Route grid does not identify the verified Hu Lao map”, update to this release and retry **Build game data**. Already collected discs can be reused. The app and updater downloads remain separate from the game-data location.
 
 ## Future updates
 
