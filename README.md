@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.10 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.10-preview.11)
+[**Open the 0.1.11 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.11-preview.12)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/PDW3-0.1.10-preview.11-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Linux-amd64.deb) |
 
-**This release fixes Windows combat sound paths and adds automatic repair of the app’s private Python.** Existing Windows-built game data can enter battles without rebuilding for the sound-path fix. Data Loader checks its Python before enabling Load/build; if repair is needed, it shows progress and offers **Retry Python setup** after failure or cancellation. Repair needs internet access only when neither the bundled nor cached private runtime passes verification. It leaves other Python installations and existing game data unchanged. Importer work also reduces repeated extraction calculations while preserving the generated files. Use **Game data location → Change drive or folder** to choose storage such as `D:\PDW3`. In 0.1.3–0.1.9, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included.
+**This release fixes Windows Python setup startup and a reproduced generic-officer battle freeze.** If Python setup repeatedly failed before returning a result, update the app and reopen Data Loader. Its private runtime check and repair leave other Python installations and existing game data unchanged. Generic officers retain the soldiers' and named officers' combat contact data, so existing packs can be reused without rebuilding. Unexpected battle errors now show a reportable failure screen. **Copy diagnostic report** and **Save diagnostic report** retain useful errors across app restarts; the desktop **Diagnostics** menu can save a report when the game interface is unresponsive. Reports stay on your device until you share them. In 0.1.3–0.1.10, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.10-preview.11/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
@@ -36,7 +36,7 @@ Download one installer for your computer. Intel Mac builds are not included in t
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. Load WO2 if wanted, then rebuild after updating to add its characters. Already collected discs can be reused; the previous installation is preserved.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1–0.1.9 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.10 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
 
 ## Change file paths or storage
 
@@ -64,7 +64,7 @@ Release checks run the bundled disc verifier and load every importer recipe. The
 
 ## Report a problem
 
-[Open a test report](https://github.com/rhaegul/pdw3-downloads/issues/new?template=test-report.yml) with your computer model, operating system, what you tried, and what happened. If available, include the Data Loader's **Copy test report** output. Do not attach disc images or original game files.
+[Open a test report](https://github.com/rhaegul/pdw3-downloads/issues/new?template=test-report.yml) with your computer model, operating system, what you tried, and what happened. Include **Copy test report** or **Save diagnostic report** output. After a crash, restart the app and use **Diagnostics → Save Diagnostic Report…** before starting another long import. Review the report before sharing it; logs remain local until you attach them. Do not attach disc images or original game files.
 
 ## About this repository
 
