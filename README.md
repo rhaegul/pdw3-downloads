@@ -4,25 +4,25 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.11 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.11-preview.12)
+[**Open the 0.1.12 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.12-preview.13)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/PDW3-0.1.11-preview.12-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Linux-amd64.deb) |
 
-**This release fixes Windows Python setup startup and a reproduced generic-officer battle freeze.** If Python setup repeatedly failed before returning a result, update the app and reopen Data Loader. Its private runtime check and repair leave other Python installations and existing game data unchanged. Generic officers retain the soldiers' and named officers' combat contact data, so existing packs can be reused without rebuilding. Unexpected battle errors now show a reportable failure screen. **Copy diagnostic report** and **Save diagnostic report** retain useful errors across app restarts; the desktop **Diagnostics** menu can save a report when the game interface is unresponsive. Reports stay on your device until you share them. In 0.1.3–0.1.10, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included.
+**This release speeds up game-data preparation across all four supported games.** It reuses shared character and animation work, avoids redundant animation calculations, and limits parallel work based on memory size. Existing imported data remains compatible and does not need rebuilding just to update the app. In 0.1.3–0.1.11, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included. **Copy diagnostic report** and **Save diagnostic report** retain useful errors across app restarts; reports stay on your device until you share them.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.11-preview.12/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
 - Your own **Dynasty Warriors 3 (US)** and **Dynasty Warriors 3: Xtreme Legends (US)** disc images (`.iso`). Both are required by the Data Loader.
 - Optionally, your own **Dynasty Warriors 2 (US)** disc image, keeping its `.cue` and `.bin` files together.
 - Optionally, your own **Warriors Orochi 2 (US)** disc image (`.iso`, SLUS_218.03).
-- Plan for **at least 85 GB of free disk space** when importing all four discs. The full plan currently budgets about 76 GiB during the build and 52 GiB of output; these are conservative estimates, not measured final sizes. Use the Data Loader's estimate for your selected discs.
-- Allow several hours for a full import. The additional maps and character sets increase the work; time depends on your computer and selected discs.
+- Plan for **at least 110 GB of free disk space** when importing all four discs. The full plan currently budgets about 98 GiB during the build, including caches and concurrent temporary files, and 52 GiB of output; these are conservative estimates, not measured final sizes. Use the Data Loader's estimate for your selected discs.
+- Build time depends on your computer and selected discs. The loader reports the current step and elapsed time; the app converts the complete selected content before play, rather than loading one original-game level.
 
 **No original game media comes with these downloads.** The app includes the Python and Node runtimes it needs; you do not need to install them separately. Disc files are processed on your computer.
 
@@ -36,7 +36,7 @@ Download one installer for your computer. Intel Mac builds are not included in t
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. Load WO2 if wanted, then rebuild after updating to add its characters. Already collected discs can be reused; the previous installation is preserved.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1–0.1.10 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.11 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
 
 ## Change file paths or storage
 
@@ -57,6 +57,8 @@ The app checks for updates when the launcher opens. You can also open **Settings
 Open **Play Game → Free Mode** after building data. All **20 DW3**, **23 DW3XL**, and **8 DW2** battlefields are available with their required discs. DW3 includes the regular **Yellow Turban Rebellion** with Han Forces and Yellow Turbans. DW2 and XL use shared DW3 combat; events, reinforcements and some victory conditions remain incomplete. The goal is to enter the original maps and attempt their battles, not complete original-game parity.
 
 WO2 adds **94 officers / 276 outfits**, **24 general and 47 soldier loadouts**, **238 standalone weapons**, and **370 officer weapon choices**. In Model Viewer, choose **Warriors Orochi 2** to browse them. In Free Mode, choose the **WO2** officer roster to use its officers in existing battlefields. Soldiers and alternate weapon choices are viewer content; this release does not add a playable WO2 soldier roster or WO2 maps. WO2 battle events, projectiles, effects and some combat behavior remain incomplete.
+
+The 0.1.12 editor also supports up to 255 units per team (within each stage’s available slots) and all 94 WO2 officers. Build the optional WO2 data to use their original models, weapons and normal/charge attacks.
 
 ## Preview status
 
