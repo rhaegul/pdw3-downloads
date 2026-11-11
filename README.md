@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.12 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.12-preview.13)
+[**Open the 0.1.13 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.13-preview.14)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/PDW3-0.1.12-preview.13-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Linux-amd64.deb) |
 
-**This release speeds up game-data preparation across all four supported games.** It reuses shared character and animation work, avoids redundant animation calculations, and limits parallel work based on memory size. Existing imported data remains compatible and does not need rebuilding just to update the app. In 0.1.3–0.1.11, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included. **Copy diagnostic report** and **Save diagnostic report** retain useful errors across app restarts; reports stay on your device until you share them.
+**This release fixes community-reported battle, movement and WO2 character issues.** It includes missing melee contacts, the Wu Zhang scene-6 failure, smoother stair traversal, WO2 progression and mounted animations, and portrait/music corrections. The importer speed improvements and larger map-editor armies from 0.1.12 remain included. Existing imported data remains compatible and does not need rebuilding just to update the app. In 0.1.3–0.1.12, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included. **Copy diagnostic report** and **Save diagnostic report** retain useful errors across app restarts; reports stay on your device until you share them.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.12-preview.13/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
@@ -36,7 +36,7 @@ Download one installer for your computer. Intel Mac builds are not included in t
 3. Press **Load** for each required disc, then expand **Game data** and choose **Build game data**. Load WO2 if wanted, then rebuild after updating to add its characters. Already collected discs can be reused; the previous installation is preserved.
 4. When the build finishes, return to the launcher and choose **Play Game**.
 
-Updating from 0.1.1–0.1.11 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
+Updating from 0.1.1–0.1.12 keeps the same data folder and any game data you already imported. If updating from 0.1.0, select your disc images again and build data in the new folder; the app identifier changed in 0.1.1. Existing data is not deleted or moved.
 
 ## Change file paths or storage
 
