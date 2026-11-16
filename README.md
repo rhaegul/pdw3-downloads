@@ -4,17 +4,17 @@ Desktop downloads published by **rhaegul**. This is an early preview of PDW3, an
 
 ## Download
 
-[**Open the 0.1.13 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.13-preview.14)
+[**Open the 0.1.14 preview release**](https://github.com/rhaegul/pdw3-downloads/releases/tag/0.1.14-preview.15)
 
 | Computer | Installer |
 | --- | --- |
-| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Windows-x64.msi) |
-| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-macOS-AppleSilicon.dmg) |
-| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/PDW3-0.1.13-preview.14-Linux-amd64.deb) |
+| Windows, x64 | [Setup EXE](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.14-preview.15/PDW3-0.1.14-preview.15-Windows-x64-setup.exe) · [MSI alternative](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.14-preview.15/PDW3-0.1.14-preview.15-Windows-x64.msi) |
+| Mac, Apple Silicon (M-series) | [DMG](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.14-preview.15/PDW3-0.1.14-preview.15-macOS-AppleSilicon.dmg) |
+| Linux, x64 | [AppImage](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.14-preview.15/PDW3-0.1.14-preview.15-Linux-x64.AppImage) · [Debian package](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.14-preview.15/PDW3-0.1.14-preview.15-Linux-amd64.deb) |
 
 **This release fixes community-reported battle, movement and WO2 character issues.** It includes missing melee contacts, the Wu Zhang scene-6 failure, smoother stair traversal, WO2 progression and mounted animations, and portrait/music corrections. The importer speed improvements and larger map-editor armies from 0.1.12 remain included. Existing imported data remains compatible and does not need rebuilding just to update the app. In 0.1.3–0.1.12, open **Settings → Check for updates**, then choose **Install and restart**. Earlier previews and Debian packages need manual installation. Python and Node are included. **Copy diagnostic report** and **Save diagnostic report** retain useful errors across app restarts; reports stay on your device until you share them.
 
-Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.13-preview.14/SHA256SUMS.txt) are provided for the installers.
+Download one installer for your computer. Intel Mac builds are not included in this preview. [SHA-256 checksums](https://github.com/rhaegul/pdw3-downloads/releases/download/0.1.14-preview.15/SHA256SUMS.txt) are provided for the installers.
 
 ## What you need
 
